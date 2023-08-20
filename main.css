@@ -1,21 +1,54 @@
-img {
-    width: auto !important;
-}
-
-.subtitle {
+footer p{
     text-align: center;
-    font-weight: lighter;
-    font-size: 12px;
+    margin: 0;
+    color:antiquewhite;
+}
+footer{
+    background-color: rgb(37, 37, 37);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    height: 100vh;
 }
 
-.autor {
-    padding-right: 200px !important;
+.containerIMG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 400px;
+}
+::marker{
+    color: rgba(0, 0, 0, 0);
 }
 
-.accordion-item {
-    border: none !important;
+.navbar-nav .nav-link.active{
+    color: aliceblue;
+
 }
 
-.submit{
-    margin-top: 16px;
+.nav-link{
+    text-align: center;
+}
+#carrossel h1{
+    text-align: center;
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: aliceblue;
+}
+
+#carrossel{
+    padding-top: 40px;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgb(0, 0, 0,0);
+    color: black;
+    border-bottom: 4px solid blueviolet;
 }
