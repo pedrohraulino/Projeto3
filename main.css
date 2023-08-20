@@ -1,0 +1,21 @@
+img {
+    width: auto !important;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.autor {
+    padding-right: 200px !important;
+}
+
+.accordion-item {
+    border: none !important;
+}
+
+.submit{
+    margin-top: 16px;
+}
