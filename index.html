@@ -1,165 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pr-br">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" IE=edge>
-    <meta name="viewport" width=device-width, initial-scale=1.0>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropStore
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel=" stylesheet " href="main.css ">
 </head>
 
 <body>
-
-    <header id="header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <h1>Meu blog</h1>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <nav class="collapse navbar-collapse justify-content-end" id="menu">
-                    <ul class="nav navbar-nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#carrossel">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#post">Postagens</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
-                        </li>
-                    </ul>
-                </nav>
+    <header id="cabecalho" class="navbar navbar-expand-lg sticky-top p-3">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <i class="navbar-brand bi bi-apple"></i>
+                <h1 class="navbar-brand m-0 p-0">iDrop</h1>
             </div>
-        </nav>
-    </header>
-    <div  data-bs-spy="scroll" data-bs-target="#header">
-        <div id="carrossel" class="container carousel carousel-fade slide" data-bs-ride="carousel">
-            <h1>Melhores fotos do Mês</h1>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="1500">
-                    <div class="containerIMG">
-                        <img src="https://images.pexels.com/photos/17480199/pexels-photo-17480199/free-photo-of-maos-musica-instrumento-musical-musico.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">    
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="1500">
-                    <div class="containerIMG">
-                        <img src="https://images.pexels.com/photos/16179987/pexels-photo-16179987/free-photo-of-28mm-35-mm-arte-abstrata-adulto.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                    </div>
-                    </div> 
-                <div class="carousel-item" data-bs-interval="1500">
-                    <div class="containerIMG">
-                        <img src="https://images.pexels.com/photos/17118488/pexels-photo-17118488/free-photo-of-adulto-camera-analogica-praia-litoral.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                    </div>
-                </div>
-            </div>
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carrossel" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#carrossel" data-bs-slide-to="1"></li>
-                <li data-bs-target="#carrossel" data-bs-slide-to="2"></li>
-            </ol>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>       
+            <nav id="menuNav" class="navbar-collapse collapse justify-content-end">
+                <ul class="nav nav-pills d-block d-lg-flex">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobre">
+                            <i class="bi bi-shop-window me-2"></i>
+                            Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#diferenciais">
+                            <i class="bi bi-bookmark-star me-2"></i>
+                            Diferenciais
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#produtos">
+                            <i class="bi bi-phone me-2"></i>
+                            Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#contato">
+                            <i class="bi bi-person-lines-fill me-2"></i>
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div id="post" class="container" >
-            <h2 class="mt-5">Conteúdos recentes</h2>
-            <div class="row">
-                <div class="container">
-                    <div class="row">
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/12270346/pexels-photo-12270346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/3483771/pexels-photo-3483771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/10016106/pexels-photo-10016106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/15597112/pexels-photo-15597112/free-photo-of-outono-declinio-celeiro-estabulo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/8957272/pexels-photo-8957272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-lg-4 col-md-6 mt-4">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Lorem ipsum</h2>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://images.pexels.com/photos/7864814/pexels-photo-7864814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="w-100">
-                                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae et repudiandae perspiciatis est, sit dolorem eveniet voluptatum quasi rem, voluptate dicta fugiat ab aliquid nam beatae blanditiis debitis dignissimos voluptates.</p>
-                                </div>
-                                <div class="card-footer">
-                                    <h6 class="mt-2">Publicado em 20/08/2023</h5>
-                                </div>
-                            </div>
-                        </article>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="cabecalho">
+        <section class="bg-dark text-bg-dark">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <div class="containerIMG">
+                            <img src="./img/macbook-iDrop.png" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="containerIMG">
+                            <img src="./img/iphone-iDrop.jpg" alt="">
+                        </div>      
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="containerIMG">
+                            <img src="./img/ipad-iDrop.jpg" alt="">
                         </div>
                     </div>
                 </div>
-        </div>
-        <footer id="contato">
-            <p>Desenvolvido por Pedro Raulino - Contato (00) 00000-0000</p>
-        </footer>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <div id="sobre" class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="d-block w-100 rounded-3" src="./img/idrop.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 d-flex flex-column justify-content-evenly">
+                            <div class="container p-0">
+                                <h2>Sobre a iDrop</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum voluptas aperiam dignissimos commodi ex voluptates minima, quasi esse doloribus perspiciatis consequatur in sint placeat nam! Mollitia explicabo illo quibusdam nemo.</p>
+                            </div>
+                            <div class="container p-0">
+                                <h3>Sobre os nossos produtos</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolore libero, magnam iusto perspiciatis voluptas iure est ipsa, quas quaerat aut sapiente quia iste illum eaque temporibus, placeat tenetur accusantium!</p>  
+                            </div>                   
+                            <div class="container p-0">
+                                <nav class="nav nav-tabs">
+                                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link text-bg-dark active" type="submit">Macbook</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link text-bg-dark" type="submit">iPhone</button>
+                                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link text-bg-dark" type="submit">iPad</button>
+                                </nav>
+                                <div class="tab-content mt-2">
+                                    <div class="tab-pane active" id="aba1">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quis similique earum et doloremque minima nostrum deleniti asperiores inventore perferendis fuga magni culpa corporis ducimus a, molestiae repellat porro! Quidem.
+                                    </div>
+                                    <div class="tab-pane" id="aba2">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quis similique earum et doloremque minima nostrum
+                                    </div>
+                                    <div class="tab-pane" id="aba3">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quis a nostrum 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="diferenciais">
+            <div class="container">
+                <div class="row">
+                    <h2 class="pt-5 pb-5 text-center">Nosso Diferenciais</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-3" src="./img/iphone-iDrop.jpg" alt="">
+                        <h3 class="pt-4 fw-bold">Entrega em Mãos</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas culpa voluptas dolorem harum, animi in a doloribus totam iusto veniam at laborum distinctio magni, tenetur sint. Ea, necessitatibus dolorem!</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-3" src="./img/macbook-iDrop.png" alt="">
+                        <h3 class="pt-4 fw-bold">Atendimento Diferenciado</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas culpa voluptas dolorem harum, animi in a doloribus totam iusto veniam at laborum distinctio magni, tenetur sint. Ea, necessitatibus dolorem!</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="d-block w-100 rounded-3" src="./img/ipad-iDrop.jpg" alt="">
+                        <h3 class="pt-4 fw-bold">Parcelamento em até 18x</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quas culpa voluptas dolorem harum, animi in a doloribus totam iusto veniam at laborum distinctio magni, tenetur sint. Ea, necessitatibus dolorem!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="produtos">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <h2 class="text-center">Nosso Produtos</h2>
+                    <p class="text-md-center">Selecione o produto no menu ao lado esquerdo para visualzar os valores</p>
+                </div>
+                <div class="row">
+                    <aside class="row">
+                        <nav class="nav nav-tabs justify-content-evenly">
+                            <button data-bs-toggle="tab" data-bs-target="#tabiPhones" class="nav-link active rounded-2">
+                                <img class="d-block containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                <h3 class="pt-4 text-dark">iPhones</h3>
+                            </button>
+                            <button data-bs-toggle="tab" data-bs-target="#tab-mac" class="nav-link rounded-2">
+                                <img class="d-block containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                <h3 class="pt-4 text-dark">Macbook</h3>
+                            </button>
+                            <button data-bs-toggle="tab" data-bs-target="#tab-ipad" class="nav-link rounded-2">
+                                <img class="d-block containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                <h3 class="pt-4 text-dark">iPad</h3>
+                            </button>
+                        </nav>                        
+                    </aside>
+                    <div class="col-md-12">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tabiPhones">
+                                <div class="row">
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPhone</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button type="submit" class="btn btn-dark">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-mac">
+                                <div class="row">
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">Macbook</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-ipad">
+                                <div class="row">
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                    <div class="col-md-3 ps-0 pt-5">
+                                        <img class=" containerIMG rounded-2" src="./img/idrop.jpg" alt="">
+                                        <h3 class="pt-4 text-dark">iPad</h3>
+                                        <h5>Lorem ipsum dolor sit amet consectetur</h5>
+                                        <h2>R$ 4232</h2>
+                                        <button class="btn btn-dark">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js "></script>
-    <script>
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#menu'
-        });
-    </script>
 </body>
