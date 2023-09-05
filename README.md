@@ -66,7 +66,6 @@ Para utilizar o programa, siga as seguintes etapas:
 ## Função QuickSort
 O Quicksort é um algoritmo de ordenação eficiente que divide a lista em subgrupos, rearranja esses grupos em relação a um pivô e depois os combina para obter a lista ordenada. Ele é rápido na maioria dos casos, com complexidade média de O(nlogn), mas pode ser lento no pior caso  O(n 2 )) se o pivô for escolhido inadequadamente.
 # Função Quicksort e Cálculo de T(n)
-Aqui está o código da função Quicksort em linguagem C, juntamente com o cálculo de \( T(n) \) de cada linha.
 
 ```c
 void quicksort(int arr[], int left, int right) {
