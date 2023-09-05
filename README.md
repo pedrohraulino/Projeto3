@@ -79,6 +79,9 @@ O processo de escolher um pivô, dividir a lista e ordenar as sublistas continua
 
 A grande sacada do Quicksort é a escolha inteligente do pivô, que pode tornar o algoritmo muito eficiente na prática. O algoritmo explora a ideia de "dividir para conquistar", que é uma estratégia poderosa para resolver problemas complexos, como a ordenação de uma lista.
 
+![image](https://github.com/pedrohraulino/Projeto3/assets/116983278/47d1f940-de7a-4cd1-b758-c968cdeb6a7f)
+(reprodução) https://iq.opengenus.org/parallel-quicksort/)
+
 ## Cálculo de T(n)
 
 ```c
