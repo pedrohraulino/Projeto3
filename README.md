@@ -109,7 +109,7 @@ T(n)=2T(n/2)+f(n)
 Em resumo, o Quicksort geralmente tem um desempenho rápido, com complexidade \(O(n \log n)\) na maioria dos casos. No entanto, é importante estar ciente do pior caso, que pode ser evitado com estratégias adequadas de escolha do pivô e otimização do algoritmo.
 
 
-##Vantagens:
+## Vantagens:
 
 **Eficiência na Maioria dos Casos:** O Quicksort é notavelmente eficiente na maioria dos cenários, especialmente em listas grandes. Sua complexidade média é \(O(n \log n)\), tornando-o mais rápido do que muitos outros algoritmos de ordenação.
 
@@ -118,7 +118,7 @@ Em resumo, o Quicksort geralmente tem um desempenho rápido, com complexidade \(
 **Flexibilidade na Escolha do Pivô:** O Quicksort permite a escolha flexível do pivô, o que pode ser otimizado para cenários específicos. Existem variações que escolhem o pivô de maneira inteligente, reduzindo o risco do pior caso.
 
 
-##Desvantagens:
+## Desvantagens:
 
 **Pior Caso Ineficiente:** O Quicksort pode ser muito ineficiente no pior caso, quando o pivô é escolhido inadequadamente e resulta em muitas partições desbalanceadas. Nesse caso, a complexidade é \(O(n^2)\), tornando-o mais lento do que algoritmos como o Merge Sort.
 
