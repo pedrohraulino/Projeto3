@@ -70,33 +70,22 @@ Aqui está o código da função Quicksort em linguagem C, juntamente com o cál
 
 ```c
 void quicksort(int arr[], int left, int right) {
-    if (left < right) {
-        int pivot = partition(arr, left, right); // T(n)
-        quicksort(arr, left, pivot - 1);         // T(n/2)
-        quicksort(arr, pivot + 1, right);        // T(n/2)
-    }
-}
+    int i, pivot, j; // c1
+    int temp; // c2
 
-int partition(int arr[], int left, int right) {
-    int pivot = arr[right];       // O(1)
-    int i = (left - 1);           // O(1)
+    for (i = left; i < right; i++) // c3 * n
+    {
+        pivot = arr[i]; // c4 * n
+        j = i - 1; // c4 * n
 
-    for (int j = left; j <= right - 1; j++) {  // T(n)
-        if (arr[j] < pivot) {                  // T(n)
-            i++;                               // T(n)
-            swap(&arr[i], &arr[j]);            // T(n)
+        while (j >= left && arr[j] > pivot) // c5 * n * (n-1)/2
+        {
+            arr[j + 1] = arr[j]; // c6 * n * (n-1)/2
+            j--; // c7 * n * (n-1)/2
         }
+
+        arr[j + 1] = pivot; // c8 * n
     }
-
-    swap(&arr[i + 1], &arr[right]);   // O(1)
-    return (i + 1);                   // O(1)
-}
-
-void swap(int* a, int* b) {
-    int t = *a;    // O(1)
-    *a = *b;       // O(1)
-    *b = t;        // O(1)
-}
 }
 ```
 
