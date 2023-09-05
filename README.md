@@ -63,9 +63,23 @@ Para utilizar o programa, siga as seguintes etapas:
 
 5. Os dados dos funcionários serão armazenados em um arquivo chamado "funcionarios.txt".
 
-## Função QuickSort
+# Função QuickSort
 O Quicksort é um algoritmo de ordenação eficiente que divide a lista em subgrupos, rearranja esses grupos em relação a um pivô e depois os combina para obter a lista ordenada. Ele é rápido na maioria dos casos, com complexidade média de O(nlogn), mas pode ser lento no pior caso  O(n 2 )) se o pivô for escolhido inadequadamente.
-# Função Quicksort e Cálculo de T(n)
+
+## Como funciona
+A Quicksort é um algoritmo de ordenação que funciona seguindo três passos simples:
+
+**Escolha do Pivô**: Primeiro, escolha um elemento da lista, chamado de "pivô". A escolha do pivô é fundamental para o desempenho do algoritmo.
+
+**Divisão**: Em seguida, reorganize a lista de forma que todos os elementos menores que o pivô fiquem à esquerda, e todos os elementos maiores fiquem à direita. Isso significa que o pivô estará em sua posição final na lista.
+
+**Recursão**: Agora, aplique o mesmo processo de ordenação às sublistas à esquerda e à direita do pivô. Isso é feito de forma recursiva até que todas as sublistas tenham apenas um elemento, que já está ordenado.
+
+O processo de escolher um pivô, dividir a lista e ordenar as sublistas continua até que a lista completa esteja ordenada.
+
+A grande sacada do Quicksort é a escolha inteligente do pivô, que pode tornar o algoritmo muito eficiente na prática. O algoritmo explora a ideia de "dividir para conquistar", que é uma estratégia poderosa para resolver problemas complexos, como a ordenação de uma lista.
+
+## Cálculo de T(n)
 
 ```c
 void quicksort(int arr[], int left, int right) { 
