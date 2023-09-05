@@ -68,51 +68,33 @@ O Quicksort é um algoritmo de ordenação eficiente que divide a lista em subgr
 # Função Quicksort e Cálculo de T(n)
 
 ```c
-void quicksort(int arr[], int left, int right) {
-    // C1
-    if (left < right) {
-        // C2
-        int pivot = partition(arr, left, right);
-        // C3
-        quicksort(arr, left, pivot - 1);
-        // c4 * T(n/2)
-        quicksort(arr, pivot + 1, right);
-        // c5 * T(n/2)
+void quicksort(int arr[], int left, int right) { 
+    if (left < right) { // C1
+        int pivot = partition(arr, left, right);// C2
+        quicksort(arr, left, pivot - 1); // c3 * T(n/2)
+        quicksort(arr, pivot + 1, right);// c4 * T(n/2)
     }
 }
 
 int partition(int arr[], int left, int right) {
-    // C6
-    int pivot = arr[right];
-    // C7
-    int i = (left - 1);
-    // C8
+    int pivot = arr[right]; // C5
+    int i = (left - 1); // C6
 
-    for (int j = left; j <= right - 1; j++) {
-        // c7*n
-        if (arr[j] < pivot) {
-            // C8
-            i++;
-            // C9
-            swap(&arr[i], &arr[j]);
-            // C10
+    for (int j = left; j <= right - 1; j++) {// c7*n
+        if (arr[j] < pivot) {// C7
+            i++;// C8
+            swap(&arr[i], &arr[j]); // C9
         }
     }
 
-    swap(&arr[i + 1], &arr[right]);
-    // C11
-    return (i + 1);
-    // C12
+    swap(&arr[i + 1], &arr[right]);// C10
+    return (i + 1); // C11
 }
 
 void swap(int* a, int* b) {
-    // C13
-    int t = *a;
-    // C14
-    *a = *b;
-    // C15
-    *b = t;
-    // C16
+    int t = *a; // C12
+    *a = *b; // C13
+    *b = t; // C14
 }
 ```
 
