@@ -64,56 +64,89 @@ Para utilizar o programa, siga as seguintes etapas:
 5. Os dados dos funcionários serão armazenados em um arquivo chamado "funcionarios.txt".
 
 ## Função QuickSort
+O Quicksort é um algoritmo de ordenação eficiente que divide a lista em subgrupos, rearranja esses grupos em relação a um pivô e depois os combina para obter a lista ordenada. Ele é rápido na maioria dos casos, com complexidade média de O(nlogn), mas pode ser lento no pior caso  O(n 2 )) se o pivô for escolhido inadequadamente.
 # Função Quicksort e Cálculo de T(n)
-
 Aqui está o código da função Quicksort em linguagem C, juntamente com o cálculo de \( T(n) \) de cada linha.
 
 ```c
 void quicksort(int arr[], int left, int right) {
-    int i, pivot, j; // c1
-    int temp; // c2
-
-    for (i = left; i < right; i++) // c3 * n
-    {
-        pivot = arr[i]; // c4 * n
-        j = i - 1; // c4 * n
-
-        while (j >= left && arr[j] > pivot) // c5 * n * (n-1)/2
-        {
-            arr[j + 1] = arr[j]; // c6 * n * (n-1)/2
-            j--; // c7 * n * (n-1)/2
-        }
-
-        arr[j + 1] = pivot; // c8 * n
+    // C1
+    if (left < right) {
+        // C2
+        int pivot = partition(arr, left, right);
+        // C3
+        quicksort(arr, left, pivot - 1);
+        // c4 * T(n/2)
+        quicksort(arr, pivot + 1, right);
+        // c5 * T(n/2)
     }
+}
+
+int partition(int arr[], int left, int right) {
+    // C6
+    int pivot = arr[right];
+    // C7
+    int i = (left - 1);
+    // C8
+
+    for (int j = left; j <= right - 1; j++) {
+        // c7*n
+        if (arr[j] < pivot) {
+            // C8
+            i++;
+            // C9
+            swap(&arr[i], &arr[j]);
+            // C10
+        }
+    }
+
+    swap(&arr[i + 1], &arr[right]);
+    // C11
+    return (i + 1);
+    // C12
+}
+
+void swap(int* a, int* b) {
+    // C13
+    int t = *a;
+    // C14
+    *a = *b;
+    // C15
+    *b = t;
+    // C16
 }
 ```
 
-## Cálculo de \( T(n) \)
+T(n)=2T(n/2)+f(n)
 
-Agora, vamos calcular a função \( T(n) \) passo a passo:
 
-1. **Escolha do Pivô**: O tempo gasto para escolher o pivô em uma lista de tamanho \( n \) é \( O(1) \), uma operação constante.
+**Melhor Caso:** O melhor caso ocorre quando o Quicksort divide a lista de entrada em partes iguais em cada chamada recursiva. Isso leva a um desempenho mais rápido, e a complexidade de tempo é \(O(n \log n)\).
 
-2. **Particionamento**: O tempo gasto para particionar a lista em elementos menores e maiores que o pivô é \( O(n) \), já que precisamos percorrer todos os elementos da lista uma vez.
+**Caso Médio:** No cenário mais realista, o Quicksort divide a lista de entrada de forma desigual em algumas chamadas recursivas, mas a média de todas as chamadas ainda resulta em \(O(n \log n)\).
 
-3. **Recursão**: Após o particionamento, o Quicksort é aplicado recursivamente às duas sublistas resultantes, uma contendo elementos menores que o pivô e a outra contendo elementos maiores. Cada uma dessas chamadas recursivas tem \( T(\frac{n}{2}) \) como tamanho da entrada.
+**Pior Caso:** O pior caso ocorre quando o Quicksort sempre escolhe o pivô de forma que apenas um elemento seja colocado em uma sublista e os outros (n-1) elementos em outra. Isso leva a (n) chamadas recursivas, cada uma lidando com um único elemento, resultando em um desempenho significativamente mais lento. A complexidade de tempo no pior caso é \(O(n^2)\).
+Em resumo, o Quicksort geralmente tem um desempenho rápido, com complexidade \(O(n \log n)\) na maioria dos casos. No entanto, é importante estar ciente do pior caso, que pode ser evitado com estratégias adequadas de escolha do pivô e otimização do algoritmo.
 
-Agora, podemos escrever a função de recorrência para \( T(n) \):
 
-\[ T(n) = O(1) + O(n) + 2T(\frac{n}{2}) \]
+**Vantagens:**
 
-A primeira parcela é para a escolha do pivô, a segunda é para o particionamento e a terceira é para as duas chamadas recursivas.
+**Eficiência na Maioria dos Casos:** O Quicksort é notavelmente eficiente na maioria dos cenários, especialmente em listas grandes. Sua complexidade média é \(O(n \log n)\), tornando-o mais rápido do que muitos outros algoritmos de ordenação.
 
-Usando o Teorema Mestre, podemos concluir que o tempo de execução do Quicksort é \( O(n \log n) \).
+**In-Place:** O Quicksort é um algoritmo "in-place", o que significa que ordena a lista diretamente sem requerer memória adicional para armazenar cópias temporárias dos elementos. Isso economiza espaço de memória.
 
-Portanto:
+**Flexibilidade na Escolha do Pivô:** O Quicksort permite a escolha flexível do pivô, o que pode ser otimizado para cenários específicos. Existem variações que escolhem o pivô de maneira inteligente, reduzindo o risco do pior caso.
 
-\[ T(n) = O(n \log n) \]
 
-Isso significa que a complexidade de tempo do algoritmo Quicksort é \( O(n \log n) \).
+**Desvantagens:**
 
-Agora você tem o código do Quicksort e o cálculo da função \( T(n) \) lado a lado em formato Markdown. Isso deve tornar mais claro como o tempo de execução é calculado em relação ao código.
+**Pior Caso Ineficiente:** O Quicksort pode ser muito ineficiente no pior caso, quando o pivô é escolhido inadequadamente e resulta em muitas partições desbalanceadas. Nesse caso, a complexidade é \(O(n^2)\), tornando-o mais lento do que algoritmos como o Merge Sort.
+
+**Não é Estável:** O Quicksort não é um algoritmo de ordenação estável, o que significa que a ordem relativa dos elementos iguais não é preservada após a ordenação. Isso pode ser um problema em algumas aplicações.
+
+**Complexidade de Implementação:** A implementação do Quicksort pode ser complexa em comparação com outros algoritmos mais simples, como o Bubble Sort ou o Insertion Sort.
+
+
+Em resumo, o Quicksort é um algoritmo de ordenação eficiente, mas sua eficácia depende da escolha do pivô e da natureza dos dados. Ele é geralmente preferido para ordenar listas grandes, onde seu desempenho médio é uma vantagem significativa. No entanto, é importante estar ciente do pior caso e tomar medidas para evitá-lo quando necessário.
 
 ## Considerações Finais
 
