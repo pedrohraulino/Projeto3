@@ -86,7 +86,7 @@ A grande sacada do Quicksort é a escolha inteligente do pivô, que pode tornar 
 ![image](https://github.com/pedrohraulino/Projeto3/assets/116983278/4e8a34f3-5f37-45fd-b033-1567c0639b78)
 (reprodução https://www.enjoyalgorithms.com/blog/quick-sort-algorithm)
 
-## Cálculo de Complexidade T(n)
+## Estrutura da Função e Cálculo de Complexidade T(n)
 
 ```c
 void quicksort(int arr[], int left, int right) { 
