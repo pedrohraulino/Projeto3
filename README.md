@@ -1,6 +1,10 @@
-# Documentação do Programa Ordenacao de Strings com Quick Sort
+# Documentação do Programa de Ordenação de Strings com Quick Sort
 
-Este documento descreve um programa de gerenciamento de funcionários escrito em linguagem C. O programa permite que os usuários cadastrem funcionário e visualizem a lista de funcionários cadastrados..
+Este documento descreve um programa de gerenciamento de funcionários escrito em linguagem C. O programa permite que os usuários cadastrem funcionários e visualizem a lista de funcionários cadastrados.
+
+Além disso, foi desenvolvido um programa em JavaScript que permite aos usuários enviar uma planilha ou criar uma do zero. Após o envio e/ou cadastro de novos usuários, a lista é reordenada em ordem alfabética usando a função QuickSort, que será explicada ao longo desta documentação.
+
+link para acessar o programa: http://pedrohraulino.github.io/
 
 ## Arquivos Fonte
 
